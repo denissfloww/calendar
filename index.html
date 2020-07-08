@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head><title>Календарь</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="container col-9">
+            <nav class="row pt-5 pb-3">
+
+                <div class="col-1">
+                    <input type="button" class="nav__button popup-open" value="Добавить">
+                </div>
+                <div class="col-2 ml-2">
+                    <form action=""><input type="submit" class="nav__button" value="Обновить"></form>
+                </div>
+                <div class="col" style="text-align: right">
+                    <img src="img/loupe_86084.png" class="loupe__img" alt="">
+                    <input type="text" class="form-control float-right nav__text" placeholder="Событие, дата или участник">
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="popup-fade">
+        <div class="popup">
+            <a class="popup-close" href="#">×</a>
+            <form action="">
+                <input type="text" class="add_text" placeholder="5 марта, 14:00, День рождения"><br>
+                <input type="button" class="add_btn" value="Создать">
+            </form>
+        </div>
+    </div>
+
+    <main class="container col-9 mt-3">
+        <div class="mounth_navigation">
+            <input type="button" class="navigation_btn back" value="◀">
+            <span class="curr_mouth">&nbsp; Март, 2013 &nbsp; </span>
+            <input type="button" class="navigation_btn next" value="▶">
+            <input type="button" class="navigation_btn now" value="сегодня">
+        </div>
+        <div class="container calendar_body">
+        </div>
+    </main>
+</body>
+</html>
