@@ -27,7 +27,6 @@ $(document).ready(function($) {
         'Ноябрь',
         'Декабрь',
     ];
-
     var dayWeek = [
         'Понедельник',
         'Вторник',
@@ -39,6 +38,7 @@ $(document).ready(function($) {
     ];
     var cal_body;
     createCalendar();
+
     function createCalendar(num = 0) {
         month+=num;
         var monthVal = " " + months[month]+ ", " + now.getFullYear() + " ";
@@ -77,19 +77,15 @@ $(document).ready(function($) {
         cal_body +="</div></div>";
         $(".calendar_body").html(cal_body);
     }
-
     $(".next").click(function () {
         createCalendar(1);
     });
-
     $(".back").click(function () {
         createCalendar(-1);
     });
-
     $(".now").click(function () {
         date = new Date();
         month = date.getMonth();
         createCalendar();
-
     })
 });
